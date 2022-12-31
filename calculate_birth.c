@@ -6,18 +6,23 @@ int main(void) {
 	int cur_day,cur_month,cur_year;
 	int after;
 	
-	printf("Nhap birht(e.g:6/6/2002): ");
-	scanf("%d/%d/%d",&bir_day,&bir_month,&bir_year);
-	printf("\nNhap current day (e.g:30/12/2022): ");
+	printf("Enter current day (e.g:30/12/2022): ");
 	scanf("%d/%d/%d",&cur_day,&cur_month,&cur_year);
-	int age;
+	printf("\nEnter birht(e.g:6/6/2002): ");
+	scanf("%d/%d/%d",&bir_day,&bir_month,&bir_year);
 
+	
+	int age;
 	age = cur_year-bir_year;
+	
+	if (age<0){
+		printf("\nInput wrong!!!");
+		return 0;
+	}
 	if(bir_day>cur_day && bir_month>cur_month)
 		age--;
-	// display leter!
-	printf("%d tuoi",age);
-	printf("\n Your age: ");
+		
+	printf("\n Your age: %d <=> ",age);
 	switch(age) {
 		case 1:
 			printf("One");
